@@ -3,14 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ChatGPT API</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/calendar.css" />
+    <title></title>
   </head>
   <body>
-    <form>
-      <input type="text" />
-      <button type="submit">입력</button>
-    </form>
-    <p id="answer"></p>
-    <script src="./js/app.js"></script>
+    <main>
+      <section class="calendar">
+        <h1 class="calendar__main-title">Calendar and TodoList</h1>
+        <div class="calendar__head">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+          <div class="current-year-month">2023.09</div>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+        <div class="calendar__body">
+          <ul class="calendar__day-of-week">
+            <li>Sun</li>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+          </ul>
+        </div>
+        <ul class="calendar__day clearfix">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+      <section class="todo">
+        <h1 class="todo__title">Today's To Do List</h1>
+        <div class="text-todo">
+          <input type="text" class="text-todo__text" />
+          <button class="text-todo__button">Add</button>
+          <button class="text-todo__button">Reset</button>
+          <button class="text-todo__button">All reset</button>
+        </div>
+        <ul class="todo-list">
+          <li>list</li>
+          <li>list</li>
+        </ul>
+      </section>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

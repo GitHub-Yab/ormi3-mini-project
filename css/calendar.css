@@ -1,0 +1,156 @@
+:root {
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+main,
+.calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar,
+.todo {
+  width: 700px;
+}
+
+.calendar__main-title,
+.calendar__head,
+.calendar__body,
+.calendar__day-of-week,
+.calendar__day {
+  width: 100%;
+}
+
+.calendar {
+  background: rgb(238, 126, 195);
+  background: linear-gradient(74deg, rgba(238, 126, 195, 1) 9%, rgba(149, 175, 213, 0.981127485173757) 100%);
+  margin: 50px auto 0;
+  /* padding: 20px 0px 20px 25px; */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.calendar__main-title {
+  text-align: center;
+}
+
+.calendar__head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.calendar__body {
+}
+
+.calendar__day-of-week {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 7px -7px 7px;
+}
+
+.calendar__day-of-week > li:first-child {
+  color: #ff000080;
+}
+.calendar__day-of-week > li {
+  width: 94px;
+}
+
+.calendar__day-of-week > li:last-child {
+  color: #0000ff80;
+}
+
+.calendar__day {
+  /* display: flex;
+  justify-content: space-evenly; */
+}
+
+.calendar__day li {
+  float: left;
+  background: white;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  margin: 10px 7px 0;
+}
+
+/* main  */
+.calendar__day li:last-child {
+  margin-right: 0;
+}
+
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.todo {
+  margin: 10px auto 100px;
+  background: var(--white);
+  padding: 20px;
+}
+
+.todo__title {
+}
+
+.text-todo {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.text-todo__text[type="text"] {
+  width: 300px;
+  /* padding: 5px 20px; */
+  border: 3px solid rgb(222, 140, 229);
+  border-radius: 10px;
+}
+
+.text-todo__text[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.text-todo__button {
+  border: none;
+  border: 3px solid rgb(220, 140, 229);
+  padding: 6px 10px;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+.text-todo__button:focus {
+  outline: none;
+}
+
+.text-todo__button:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(1.1);
+}
+
+.todo-list {
+  padding: 10px;
+}
+
+.todo-list li {
+  padding: 8px;
+  border-bottom: 1px solid gray;
+}
