@@ -22,18 +22,13 @@
 
 ### 주요 기능
 
-- 각 날짜별로 할 일 목록을 localStorage에 저장.
-https://github.com/GitHub-Yab/ormi3-mini-project/assets/107196918/87d91d12-3ce8-4121-85a1-a3c945309e7a
+- 각 날짜별로 할 일 목록을 localStorage에 저장
 
 
-https://github.com/GitHub-Yab/ormi3-mini-project/assets/107196918/746601eb-92c9-497e-a0de-dfafd3ac624a
+![화면-기록-2023-09-07-오전-12 08 11](https://github.com/GitHub-Yab/ormi3-mini-project/assets/107196918/6c3478d4-f7a1-4247-b32b-04dfd3b0092e)
+![화면-기록-2023-09-07-오전-12 12 58](https://github.com/GitHub-Yab/ormi3-mini-project/assets/107196918/e1e219bf-c1cc-484c-a4ef-90319bf6d822)
+![Uploading 화면-기록-2023-09-07-오전-12.16.57.gif…]()
 
-
-https://github.com/GitHub-Yab/ormi3-mini-project/assets/107196918/2d4e8d4d-3e23-4efd-946f-9171638aefcc
-
-
-
-  
 - GPT를 통한 일정 관리
 - localStorage에 저장된 내용을 기반으로 GPT의 할 일 목록 관리.
 
