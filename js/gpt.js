@@ -30,7 +30,6 @@ export const data = [
 ];
 
 export function chatGPT() {
-  // data.push(calendar.data)
   fetch(url, {
     method: "POST",
     headers: {
@@ -41,22 +40,6 @@ export function chatGPT() {
   })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
-      // console.log(res.choices[0].message.content);
-      console.log(JSON.stringify(res.choices[0].message.content));
-      // 답변 온 것을 assistant로 저장
       chat.appendMessage(`${res.choices[0].message.content}`, "left");
     });
 }
-
-// $button.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   const contents = $input.value;
-//   data.push({
-//     role: "user",
-//     content: contents,
-//   });
-//   $input.value = "";
-
-//   chatGPT();
-// });

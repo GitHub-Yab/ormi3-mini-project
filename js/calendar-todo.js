@@ -28,12 +28,10 @@ let mon = currentMon;
 let clickEventArr = [];
 let storedToDos = [];
 
-// 2월 윤년 계산
 function isLeapYear(year) {
   return year % 4 == 0 && (year % 400 == 0 || year % 100 != 0);
 }
 
-// 달에 몇일 있는지 계산
 function getDayOfMon(mon, year) {
   if (mon === 1 || mon === 3 || mon === 5 || mon === 7 || mon === 8 || mon === 10 || mon === 12) {
     return 31;
@@ -44,7 +42,6 @@ function getDayOfMon(mon, year) {
   }
 }
 
-// 요일 구하는 함수
 function getDay(year, mon, date) {
   const YMD = `${year}-${mon}-${date}`;
   return new Date(YMD).getDay();
@@ -150,7 +147,7 @@ function preMonthOrYear() {
 function main() {
   setMonthTitle(year, mon);
   makeCalendar(year, mon, getDayOfMon(mon, year));
-  todoTitle.textContent = `What are you going to do on ${year}.${mon}.${currentDay} 👀⁉`;
+  todoTitle.textContent = `${year}.${mon}.${currentDay} 오늘의 할 일 👀⁉`;
   paintToDo();
 }
 
@@ -164,43 +161,20 @@ function clearEvent() {
 }
 
 reset.addEventListener("click", () => {
-  const result = prompt(`Do you really want to reset TODO on ${year} ${mon} ${DayOfChoice}? Enter (y/n)`);
+  const result = confirm(`${year}.${mon}.${DayOfChoice} 리스트를 초기화 하시겠습니까?`);
 
   const YMD_KEY = `${year}-${mon}-${DayOfChoice}`;
-  if (result === "y") {
+  if (result === true) {
     localStorage.removeItem(YMD_KEY);
     paintToDo();
   }
 });
 
 allReset.addEventListener("click", () => {
-  const result = prompt(`Do you really want to clear all TODO? Enter (y/n) not recomended💥`);
-  if (result === "y") {
+  const result = confirm(`전체 초기화를 진행 하시겠습니까?`);
+  if (result === true) {
     localStorage.clear();
     paintToDo();
-  }
-});
-
-todoList.addEventListener("click", (event) => {
-  if (event.target.className === "far fa-minus-square") {
-    console.log("a: " + event.target.parentNode.parentNode.textContent);
-
-    const YMD_KEY = `${year}-${mon}-${DayOfChoice}`;
-
-    if (localStorage.getItem(YMD_KEY).includes(",")) {
-      let array = localStorage.getItem(YMD_KEY).split(",");
-      let copyArray = [];
-      array.forEach((value) => {
-        if (value !== event.target.parentNode.parentNode.textContent) {
-          copyArray.push(value);
-        }
-      });
-      localStorage.setItem(YMD_KEY, copyArray);
-    } else {
-      localStorage.removeItem(YMD_KEY);
-    }
-
-    todoList.removeChild(event.target.parentNode.parentNode);
   }
 });
 
@@ -218,7 +192,7 @@ day.addEventListener("click", (event) => {
   if (event.target.tagName === "UL") return;
   if (event.target.className !== "disabled") {
     clearEvent();
-    todoTitle.textContent = `What are you going to do on ${year}.${mon}.${event.target.textContent} 👀⁉`;
+    todoTitle.textContent = `${year}.${mon}.${event.target.textContent} 오늘의 할 일👀⁉`;
     event.target.style.border = "3px solid red";
     DayOfChoice = event.target.textContent * 1;
     MonOfChoice = mon;
@@ -312,7 +286,7 @@ function handleToDoSubmit(event) {
   // event.preventDefault();
 
   if (input.value === "") {
-    alert("please input you are going to do");
+    alert("값을 입력해 주세요.");
     return;
   }
   const newTodo = input.value;
