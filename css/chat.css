@@ -1,0 +1,126 @@
+.chat-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 8;
+  backdrop-filter: blur(5px);
+  transition: opacity 0.3s;
+}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  z-index: 9;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #63bfe3;
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+button#closeChat {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.chat-content {
+  padding: 10px 20px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chat-messages {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-bottom: 10px;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.message p,
+.message pre {
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.message.left p,
+.message.left pre {
+  background-color: #f2f2f2;
+}
+
+.message.right {
+  justify-content: flex-end;
+}
+
+.message.right p {
+  background-color: #4eb4dc;
+  color: white;
+}
+
+.message-input {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button#sendMessage {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate(-50%, -80%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}

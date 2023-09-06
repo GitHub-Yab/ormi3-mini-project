@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/calendar.css" />
+    <link rel="stylesheet" href="./css/chat.css" />
     <title></title>
   </head>
   <body>
@@ -12,9 +13,9 @@
       <section class="calendar">
         <h1 class="calendar__main-title">Calendar and TodoList</h1>
         <div class="calendar__head">
-          <ion-icon name="chevron-back-outline"></ion-icon>
+          <ion-icon class="left" name="chevron-back-outline"></ion-icon>
           <div class="current-year-month">2023.09</div>
-          <ion-icon name="chevron-forward-outline"></ion-icon>
+          <ion-icon class="right" name="chevron-forward-outline"></ion-icon>
         </div>
         <div class="calendar__body">
           <ul class="calendar__day-of-week">
@@ -27,60 +28,43 @@
             <li>Sat</li>
           </ul>
         </div>
-        <ul class="calendar__day clearfix">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li>
-          <li>16</li>
-          <li>17</li>
-          <li>18</li>
-          <li>19</li>
-          <li>20</li>
-          <li>21</li>
-          <li>22</li>
-          <li>23</li>
-          <li>24</li>
-          <li>25</li>
-          <li>26</li>
-          <li>27</li>
-          <li>28</li>
-          <li>29</li>
-          <li>30</li>
-          <li>31</li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+        <ul class="calendar__day clearfix"></ul>
       </section>
       <section class="todo">
         <h1 class="todo__title">Today's To Do List</h1>
         <div class="text-todo">
-          <input type="text" class="text-todo__text" />
-          <button class="text-todo__button">Add</button>
-          <button class="text-todo__button">Reset</button>
-          <button class="text-todo__button">All reset</button>
+          <input type="text" class="text-todo__input" />
+          <button class="text-todo__button add">Add</button>
+          <button class="text-todo__button reset">Reset</button>
+          <button class="text-todo__button all-reset">All reset</button>
+          <button id="openChat">Start Chat</button>
         </div>
-        <ul class="todo-list">
-          <li>list</li>
-          <li>list</li>
-        </ul>
+        <ul class="todo-list"></ul>
+
+        <div class="chat-background" id="chatBackground"></div>
+        <div class="chat-popup" id="chatPopup">
+          <div class="chat-header">
+            <h2>1:1 Chat</h2>
+            <button id="closeChat">&#10005;</button>
+          </div>
+          <div class="chat-content">
+            <div class="chat-messages" id="chatMessages"></div>
+            <form id="messageForm" action="">
+              <!-- form 타입으로 변경, action을 "#"으로 설정 -->
+              <div class="message-input">
+                <input type="text" id="messageInput" placeholder="Type a message..." required />
+                <button type="submit" id="sendMessage">Send</button>
+                <!-- type을 submit으로 변경 -->
+              </div>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="./js/calendar-todo.js"></script>
+    <script type="module" src="./js/chat.js"></script>
+    <script type="module" src="/js/gpt.js"></script>
   </body>
 </html>

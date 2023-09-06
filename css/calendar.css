@@ -14,6 +14,7 @@ ul {
 
 body {
   background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 main,
@@ -38,8 +39,7 @@ main,
 }
 
 .calendar {
-  background: rgb(238, 126, 195);
-  background: linear-gradient(74deg, rgba(238, 126, 195, 1) 9%, rgba(149, 175, 213, 0.981127485173757) 100%);
+  background: linear-gradient(74deg, #f5f5dcb7, #63bfe3 100%);
   margin: 50px auto 0;
   /* padding: 20px 0px 20px 25px; */
   padding: 20px;
@@ -66,14 +66,14 @@ main,
 }
 
 .calendar__day-of-week > li:first-child {
-  color: #ff000080;
+  color: red;
 }
 .calendar__day-of-week > li {
   width: 94px;
 }
 
 .calendar__day-of-week > li:last-child {
-  color: #0000ff80;
+  color: blue;
 }
 
 .calendar__day {
@@ -103,32 +103,32 @@ main,
 
 .todo {
   margin: 10px auto 100px;
-  background: var(--white);
+  background: #f5f5dc;
   padding: 20px;
 }
 
 .todo__title {
 }
 
-.text-todo {
+.todo-form {
   display: flex;
   justify-content: flex-start;
   gap: 10px;
 }
 
-.text-todo__text[type="text"] {
+.todo-form__input[type="text"] {
   width: 300px;
   /* padding: 5px 20px; */
   border: 3px solid rgb(222, 140, 229);
   border-radius: 10px;
 }
 
-.text-todo__text[type="text"]:focus {
+.todo-form__input[type="text"]:focus {
   outline: none;
   box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
-.text-todo__button {
+.todo-form__button {
   border: none;
   border: 3px solid rgb(220, 140, 229);
   padding: 6px 10px;
@@ -136,11 +136,11 @@ main,
   border-radius: 20px;
 }
 
-.text-todo__button:focus {
+.todo-form__button:focus {
   outline: none;
 }
 
-.text-todo__button:hover {
+.todo-form__button:hover {
   cursor: pointer;
   transition: all 0.2s;
   transform: scale(1.1);
@@ -153,4 +153,53 @@ main,
 .todo-list li {
   padding: 8px;
   border-bottom: 1px solid gray;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: 1px solid #87ceeb;
+  padding: 10px;
+  color: #333;
+  border-radius: 5px;
+  outline: none;
+  width: 50%;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #ff6b6b;
+}
+
+button {
+  background-color: #87ceeb;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+li button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
+
+button:hover {
+  background-color: #ff6b6b;
+}
+
+.left,
+.right {
+  cursor: pointer;
 }
