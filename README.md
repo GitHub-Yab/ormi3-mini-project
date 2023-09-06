@@ -24,10 +24,9 @@
 
 - 각 날짜별로 할 일 목록을 localStorage에 저장
 
-
 ![화면-기록-2023-09-07-오전-12 08 11](https://github.com/GitHub-Yab/ormi3-mini-project/assets/107196918/6c3478d4-f7a1-4247-b32b-04dfd3b0092e)
 ![화면-기록-2023-09-07-오전-12 12 58](https://github.com/GitHub-Yab/ormi3-mini-project/assets/107196918/e1e219bf-c1cc-484c-a4ef-90319bf6d822)
-![Uploading 화면-기록-2023-09-07-오전-12.16.57.gif…]()
+![화면-기록-2023-09-07-오전-12 16 57](https://github.com/GitHub-Yab/ormi3-mini-project/assets/107196918/c4d8a81e-33cd-474f-af5b-94b7fcf3eb57)
 
 - GPT를 통한 일정 관리
 - localStorage에 저장된 내용을 기반으로 GPT의 할 일 목록 관리.
