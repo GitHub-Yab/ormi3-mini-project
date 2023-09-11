@@ -1,0 +1,20 @@
+@import "./normalize1.css";
+@import "./variables1.css";
+
+@import "./components1/calendar1.css";
+@import "./components1/chat1.css";
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background-color: #fafafa;
+  color: #000000cc;
+}

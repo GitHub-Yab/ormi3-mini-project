@@ -1,0 +1,73 @@
+@import "./normalize.css";
+@import "./variables.css";
+
+@import "./components/calendar.css";
+@import "./components/todo.css";
+@import "./components/chat.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(250, 250, 250);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  border: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: #f5f5dc;
+  border-bottom: 1.5px solid #87ceeb;
+  padding: 5px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #ff6b6b;
+}
+
+button {
+  background-color: #87ceeb;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff6b6b;
+}
+
+li button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.todo-calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 50px 40px;
+}

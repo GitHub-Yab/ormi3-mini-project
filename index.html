@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/calendar.css" />
-    <link rel="stylesheet" href="./css/chat.css" />
     <title></title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <main>
+    <main class="todo-calendar">
       <section class="calendar">
-        <h1 class="calendar__main-title">Calendar and TodoList</h1>
+        <h1 class="calendar__main-title">Todo Calendar</h1>
+
         <div class="calendar__head">
-          <ion-icon class="left" name="chevron-back-outline"></ion-icon>
-          <div class="current-year-month">2023.09</div>
-          <ion-icon class="right" name="chevron-forward-outline"></ion-icon>
+          <ion-icon class="calendar__icon--left" name="chevron-back-outline"></ion-icon>
+          <div class="calendar__current-year-month">20XX.0X</div>
+          <ion-icon class="calendar__icon--right" name="chevron-forward-outline"></ion-icon>
         </div>
+
         <div class="calendar__body">
           <ul class="calendar__day-of-week">
             <li>Sun</li>
@@ -27,42 +27,39 @@
             <li>Fri</li>
             <li>Sat</li>
           </ul>
+          <ul class="calendar__day"></ul>
         </div>
-        <ul class="calendar__day clearfix"></ul>
       </section>
-      <section class="todo">
-        <h1 class="todo__title">Today's To Do List</h1>
-        <div class="text-todo">
-          <input type="text" class="text-todo__input" />
-          <button class="text-todo__button add">Add</button>
-          <button class="text-todo__button reset">Reset</button>
-          <button class="text-todo__button all-reset">All reset</button>
-          <button id="openChat">Start Chat</button>
-        </div>
-        <ul class="todo-list"></ul>
 
-        <div class="chat-background" id="chatBackground"></div>
-        <div class="chat-popup" id="chatPopup">
-          <div class="chat-header">
-            <h2>1:1 Chat</h2>
-            <button id="closeChat">&#10005;</button>
-          </div>
-          <div class="chat-content">
-            <div class="chat-messages" id="chatMessages"></div>
-            <form id="messageForm" action="">
-              <div class="message-input">
-                <input type="text" id="messageInput" placeholder="Type a message..." required />
-                <button type="submit" id="sendMessage">Send</button>
-              </div>
-            </form>
+      <section class="todo">
+        <div class="todo__head">
+          <div class="todo__title">20XX.X.X 오늘의 할 일 👀⁉</div>
+          <div>
+            <button class="todo__ai-chat">
+              <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+            </button>
           </div>
         </div>
+
+        <div class="todo__body">
+          <div class="todo__text-form">
+            <input type="text" class="text-form__input" />
+            <button class="todo__button add">Add</button>
+            <button class="todo__button reset">Reset</button>
+            <button class="todo__button all-reset">All Reset</button>
+          </div>
+
+          <ul class="todo__list">
+            <li>asdas</li>
+            <li>asdas</li>
+            <li>asdas</li>
+          </ul>
+        </div>
+        <section class="chat"></section>
       </section>
     </main>
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script type="module" src="./js/calendar-todo.js"></script>
-    <script type="module" src="./js/chat.js"></script>
-    <script type="module" src="/js/gpt.js"></script>
   </body>
 </html>

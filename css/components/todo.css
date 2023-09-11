@@ -1,0 +1,39 @@
+.todo {
+  background-color: #f5f5dc;
+  width: 700px;
+  padding: 21px;
+}
+
+.todo__head,
+.todo__main {
+  width: 100%;
+}
+
+.todo__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0.3em 0 2em 0;
+}
+
+.todo__title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.todo__ai-chat {
+}
+
+.todo__main {
+}
+
+.todo__text-form {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  height: 32px;
+}
+
+.text-form__input {
+  width: 65%;
+}
